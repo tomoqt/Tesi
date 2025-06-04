@@ -75,7 +75,7 @@ Modern post‐training reinforcement learning techniques—such as DAPO (Data‐
 * Evaluate on synthetic group‐generation environments (e.g., set construction tasks) and measure sample efficiency & diversity.
 * Analyze how entropy‐based signals affect convergence stability and final policy quality.
 
-*(No repository yet; this can be implemented using existing RL frameworks such as Stable Baselines3 or custom code.)*
+*(No repository yet; this can be implemented using existing RL frameworks such as Verifiers or custom code.)*
 
 ---
 
