@@ -59,6 +59,7 @@ In standard Transformers, depth is the only mechanism by which representations o
 
   * Use tensor‐decomposition techniques (e.g., CP, Tucker) to perform multilinear attention updates in higher‐order spaces without incurring exponential memory blow‐up.
   * Benchmark trade‐offs between expressivity and computational overhead.
+  * 
 **Repository**
 [github.com/tomoqt/hyperattention](https://github.com/tomoqt/hyperattention)
 
