@@ -135,13 +135,11 @@ We want to leverage a tokenized representation of NMR spectra (e.g., discretized
 This project introduces a benchmark to evaluate the algorithmic reasoning capabilities of large language models (LLMs) by tasking them with designing functional Turing machines from formal problem statements. The benchmark is built on a unique dataset of algorithmic problems from a long-running Italian national programming competition
 
 **What’s already built:**
-    *Corpus Extraction Pipeline: A multimodal parsing script processes scanned and typeset competition PDFs into structured JSONL format, capturing problem statements, examples, and metadata.
-    *Data: ~300 problems are already parsed, covering 20+ editions of the national competition, each labeled by edition and difficulty level.
-    *Test Case Generator: A test case synthesis suite uses the Gemini API to generate diverse and challenging test cases that go beyond the examples given in the original problems.
-    *Turing Machine Simulator: The benchmark relies on the official JSTMSimulator, a JavaScript-based Turing machine simulator used in the original competition, faithfully reproducing the intended semantics and evaluation criteria. Serves as the ground truth execution
-    environment. Supports full machine configuration: states, transitions, multi-symbol tapes, head movements, and halting logic. A dedicated Python wrapper (simulator.py) provides a programmatic bridge to the JS engine, enabling automated evaluation within the benchmark 
-    loop.
-    *Evaluation Framework: An orchestrator coordinates the loop of: prompting an LLM to generate a Turing machine candidate; simulating it using the custom interpreter (JSTMSimulator); collecting execution traces and iteratively refining the machine based on failures.
+*Corpus Extraction Pipeline: A multimodal parsing script processes scanned and typeset competition PDFs into structured JSONL format, capturing problem statements, examples, and metadata.
+*Data: ~300 problems are already parsed, covering 20+ editions of the national competition, each labeled by edition and difficulty level.
+*Test Case Generator: A test case synthesis suite uses the Gemini API to generate diverse and challenging test cases that go beyond the examples given in the original problems.
+*Turing Machine Simulator: The benchmark relies on the official JSTMSimulator, a JavaScript-based Turing machine simulator used in the original competition, faithfully reproducing the intended semantics and evaluation criteria. Serves as the ground truth execution environment. Supports full machine configuration: states, transitions, multi-symbol tapes, head movements, and halting logic. A dedicated Python wrapper (simulator.py) provides a programmatic bridge to the JS engine, enabling automated evaluation within the benchmark loop.
+*Evaluation Framework: An orchestrator coordinates the loop of: prompting an LLM to generate a Turing machine candidate; simulating it using the custom interpreter (JSTMSimulator); collecting execution traces and iteratively refining the machine based on failures.
 
 **Research Questions**
 The central goal of this benchmark is to evaluate whether large language models (LLMs) can perform robust algorithmic reasoning by synthesizing fully functional Turing machines from natural language specifications.
