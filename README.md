@@ -130,7 +130,7 @@ We want to leverage a tokenized representation of NMR spectra (e.g., discretized
 [github.com/tomoqt/multimodal](https://github.com/tomoqt/multimodal.git)
 
 ---
-## 7. Turing Machine Design from Natural Language
+## 7. Turing Machine Design from Natural Language: Benchmark
 **Overview:**
 This project introduces a benchmark to evaluate the algorithmic reasoning capabilities of large language models (LLMs) by tasking them with designing functional Turing machines from formal problem statements. The benchmark is built on a unique dataset of algorithmic problems from a long-running Italian national programming competition
 
