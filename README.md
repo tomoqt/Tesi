@@ -152,7 +152,68 @@ While the dataset and simulator are already available, the benchmark framework i
 * federico.califano@aisparks.it
 
 ---
+## 8. REBUS: A truly multi-modal language-vision cloze test.
 
+**Overview:** You might be familiar with
+[REBUS puzzles](https://en.wikipedia.org/wiki/Rebus), specifically those made by
+[La Settimana Enigmistica](https://www.lasettimanaenigmistica.com/) (SE). These
+can be viewed as a form of multimodal (text and image)
+[cloze](https://en.wikipedia.org/wiki/Cloze_test) test, a test whose unimodal
+text-format variant is inspiration for the MLM pretraining objective central to
+the
+[distributional hypothesis](https://en.wikipedia.org/wiki/Distributional_semantics)
+in NLP which spurred the progress in LLMs in the last decade.
+
+REBUS puzzles from SE are very difficult for humans, and current VLMs do
+terrible on them. They require a range of capabilities such as localization,
+multimodal understanding and reasoning.
+
+In general there is demand for _hard_ benchmarks, so building a REBUS-style
+benchmark would be a welcome and fun addition to the field.
+
+**Goals**
+
+1. Build the benchmark
+   - we probably cannot scrape SE, for copyright reasons
+   - however, we don't need to, we live in >2025, we can just generate
+     REBUS-style puzzles using generative image models (e.g. diffusion, see
+     [flux](https://github.com/black-forest-labs/flux) and the associated
+     ecosystem around these models, like [ComfyUI](https://www.comfy.org/))
+   - 50 to 200 samples is enough for a benchmark
+2. Evaluate existing VLMs on the benchmark
+3. (Optional) Try hill-climbing the benchmark
+   - Would require a training set, which we can generate using the generative
+     image models mentioned above, going beyond the 200 samples of evaluation.
+   - we can try various post-training strategies on the VLMs, e.g.
+     [GRPO](https://x.com/__sunil_kumar_/status/1900365571016806793)
+4. (Optional) Perform experiments on the effects of tokenization on the
+   performance on the benchmark
+   - Might require a family of models trained on the same data but with
+     different tokenization strategies, similar to what was done with
+     [pythia](https://arxiv.org/abs/2304.01373). This could kind of be a project
+     of its own (just training a family of models with different tokenization)
+
+**Related Work**
+
+- https://scale.com/leaderboard/enigma_eval
+- https://cavendishlabs.org/rebus/
+- ZeroBench
+- TextGames: https://arxiv.org/abs/2502.18431
+- Enigmata https://x.com/siyu_yuan_/status/1927248765712285776
+
+**Possible models to evaluate**
+
+- molmo
+- Nvlm
+- O1
+- Gpt4o
+- Claude 3.5 sonnet
+- moondream
+
+**Repository:**
+[github.com/thesofakillers/rebus](https://github.com/thesofakillers/rebus)
+
+---
 ### How to Choose
 
 * **Theoretically inclined?**
