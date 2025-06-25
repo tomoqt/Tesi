@@ -192,6 +192,8 @@ benchmark would be a welcome and fun addition to the field.
      different tokenization strategies, similar to what was done with
      [pythia](https://arxiv.org/abs/2304.01373). This could kind of be a project
      of its own (just training a family of models with different tokenization)
+5. (Optional) What if we viewed this more as a ~ pre/midtraining task specifically
+   made for VLMs? Risky but possibly interesting.
 
 **Related Work**
 
