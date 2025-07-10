@@ -68,13 +68,9 @@ In standard Transformers, depth is the only mechanism by which representations o
 ## 4. Entropix‐Steered GRPO
 
 **Overview:**
-Modern post‐training reinforcement learning techniques—such as DAPO (Data‐Augmented Policy Optimization) and GRPO (Generalized Replay‐based Policy Optimization)—often use relative advantages between rollouts as the reward signal. In this project, you will explore leveraging entropy (or even higher‐order surprisal moments) of the policy’s output distribution to better navigate the exploration vs. exploitation tradeoff, especially in “group generation” tasks (e.g., generating sets or graphs).
+Modern post‐training reinforcement learning techniques—such as DAPO (Data‐Augmented Policy Optimization) and GRPO (Generalized Replay‐based Policy Optimization)—often use relative advantages between rollouts as the reward signal. In this project, you will explore leveraging entropy (or even higher‐order surprisal moments) of the policy’s output distribution to better navigate the exploration vs. exploitation tradeoff, especially in “group generation”.
 
-**Goals:**
 
-* Define a new reward signal that incorporates entropy or moments of surprisal, and compare it against vanilla advantage‐based signals.
-* Evaluate on synthetic group‐generation environments (e.g., set construction tasks) and measure sample efficiency & diversity.
-* Analyze how entropy‐based signals affect convergence stability and final policy quality.
 
 *(No repository yet; this can be implemented using existing RL frameworks such as Verifiers or custom code.)*
 
